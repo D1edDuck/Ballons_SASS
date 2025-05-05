@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #777777;
+  letter-spacing: 2px;
+  padding: 50px;
+  background-color: #fff;
+}
+
+.container {
+  background-color: #F7F7F7;
+}
+
+.header {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/pexels-mehmet-turgut-kirkgoz-5865634.jpg) center/cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+.header__logo {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 56px;
+  height: 70px;
+}
+.header__box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.title-first__main {
+  display: block;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 60px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 10px;
+  animation: leftToRight 1.7s ease 0.7s;
+}
+.title-first__secondary {
+  display: block;
+  letter-spacing: 5px;
+  font-weight: 100;
+  color: #fff;
+  animation: RightToLeft 1.7s ease 0.7s;
+  margin-bottom: 50px;
+}
+
+.btn:link, .btn:visited {
+  color: #777777;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 15px 40px;
+  background-color: #fff;
+  border-radius: 50px;
+  display: inline-block;
+  transition-duration: 0.3s;
+  position: relative;
+}
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+.btn:hover::after {
+  transform: scale(1.6);
+  opacity: 0;
+}
+.btn:active {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+.btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  z-index: -1;
+  transition: all 0.3s;
+}
+.btn_animated {
+  animation: BtnToUp 0.4s ease-out 0.7s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes RightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes BtnToUp {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */
