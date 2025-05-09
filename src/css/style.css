@@ -4,13 +4,17 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.6%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #777777;
-  letter-spacing: 2px;
-  padding: 50px;
+  letter-spacing: 0.2rem;
+  padding: 5rem;
   background-color: #fff;
 }
 
@@ -27,10 +31,10 @@ body {
 }
 .header__logo {
   position: absolute;
-  top: 50px;
-  left: 50px;
-  width: 56px;
-  height: 70px;
+  top: 5rem;
+  left: 5rem;
+  width: 5.6rem;
+  height: 7rem;
 }
 .header__box {
   position: absolute;
@@ -44,12 +48,12 @@ body {
 .title-first__main {
   display: block;
   font-weight: 800;
-  font-size: 50px;
-  line-height: 60px;
+  font-size: 5rem;
+  line-height: 6rem;
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 10px;
-  letter-spacing: 10px;
+  margin-bottom: 1rem;
+  letter-spacing: 1rem;
   animation: leftToRight 1.7s ease 0.7s;
 }
 .title-first__secondary {
@@ -58,16 +62,16 @@ body {
   font-weight: 100;
   color: #fff;
   animation: RightToLeft 1.7s ease 0.7s;
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
 }
 
 .btn:link, .btn:visited {
   color: #777777;
   text-decoration: none;
-  font-size: 20px;
-  padding: 15px 40px;
+  font-size: 2rem;
+  padding: 1.5rem 4rem;
   background-color: #fff;
-  border-radius: 50px;
+  border-radius: 5rem;
   display: inline-block;
   transition-duration: 0.3s;
   position: relative;
@@ -93,7 +97,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 50px;
+  border-radius: 5rem;
   z-index: -1;
   transition: all 0.3s;
 }
@@ -136,5 +140,10 @@ body {
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+@media (max-width: 1000px) {
+  html {
+    font-size: 50%;
   }
 }/*# sourceMappingURL=style.css.map */
