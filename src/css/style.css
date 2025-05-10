@@ -253,6 +253,113 @@ body {
   display: inline-block;
 }
 
+.card-tour {
+  height: 50rem;
+  position: relative;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+}
+.card-tour__side {
+  transition: 0.4s all ease-out;
+  height: 50rem;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+}
+.card-tour__side_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(120deg, #BA8554, #A14F03);
+  transform: rotateY(180deg);
+}
+.card-tour__side_font {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+.card-tour__side-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-tour:hover .card-tour__side_back {
+  transform: rotateY(0deg);
+}
+.card-tour:hover .card-tour__side_font {
+  transform: rotateY(-180deg);
+}
+.card-tour__text {
+  text-align: center;
+  margin-bottom: 8rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+.card-tour__text_1 {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.card-tour__text_2 {
+  font-size: 6rem;
+  font-weight: 500;
+}
+.card-tour__img {
+  height: 20rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  background-blend-mode: hard-light;
+}
+.card-tour__img_1 {
+  background: #BA8554 url(../img/tour_2.png) center/cover;
+}
+.card-tour__img_2 {
+  background: #BA8554 url(../img/tour_1.png) center/cover;
+}
+.card-tour__img_3 {
+  background: #BA8554 url(../img/tour_3.png) center/cover;
+}
+.card-tour__title {
+  letter-spacing: 0.2rem;
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: right;
+  position: absolute;
+  top: 16rem;
+  right: 0;
+}
+.card-tour__span {
+  padding: 1rem 2rem 0.3rem 2rem;
+  background: linear-gradient(90deg, #BA8554, #A14F03);
+}
+.card-tour__span_2 {
+  position: absolute;
+  right: 0;
+  top: 3srem;
+  padding-bottom: 1rem;
+}
+.card-tour__descr ul {
+  list-style: none;
+  width: 75%;
+  margin-inline: auto;
+  text-align: center;
+}
+.card-tour__descr ul li {
+  font-size: 1.6rem;
+  display: inline-block;
+  letter-spacing: 0.2rem;
+  color: #777777;
+  border-bottom: 1px solid #777777;
+}
+.card-tour__descr ul li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
