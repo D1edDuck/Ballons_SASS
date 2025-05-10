@@ -1,6 +1,6 @@
 //Загаловки
 .title-first
-    &__main 
+    &__main
         display: block
         font-weight: 800
         font-size: 5rem
@@ -12,7 +12,7 @@
         animation: leftToRight 1.7s ease .7s
         animation-fill-mode: backwards
     &__secondary
-        display: block  
+        display: block
         letter-spacing: 0.5rem
         font-weight: 100
         color: $color-white
@@ -20,7 +20,7 @@
         margin-bottom: 5rem
         animation-fill-mode: backwards
 
-body 
+body
     font-family: "Roboto", sans-serif
     font-weight: 400
     font-size: 1.6rem
@@ -30,7 +30,7 @@ body
 .title-secondary
     text-align: center
     display: inline-block
-    font-size: 3.6rem
+    font-size: $font-size-h2
     letter-spacing: 1rem
     text-transform: uppercase
     font-weight: 800
@@ -40,5 +40,16 @@ body
     transition: all .4s
     backface-visibility: hidden
     &:hover
-        transform:  skew(15deg, 2deg) scale(1.1)
+        transform: skew(15deg, 2deg) scale(1.1)
         text-shadow: 0 .4rem .4rem rgba($color-black, .25 )
+
+.title-third
+    font-size: $font-size-h3
+    font-weight: 700
+    letter-spacing: .2rem
+
+.paragraph
+    font-size: $font-size-p
+    line-height: 160%
+    letter-spacing: .2rem
+    font-weight: 400

@@ -13,13 +13,13 @@
     //Анимации для наведения и нажатия
     &:hover
         transform: translateY(-0.4rem)
-        box-shadow:(0px 4px 4px rgba($color-black, 0.3))
+        box-shadow:$box-shadow
         &::after
             transform: scale(1.6)
             opacity: 0
     &:active
         transform: translateY(-2px)
-        box-shadow:(0px 4px 4px rgba($color-black, 0.1))
+        box-shadow: $box-shadow-active
     //Блок для анимации
     &::after
         content: ""
