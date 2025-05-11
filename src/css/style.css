@@ -143,10 +143,11 @@ body {
   margin-bottom: 8rem;
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   color: #777777;
   text-decoration: none;
   font-size: 2rem;
+  border: none;
   padding: 1.5rem 4rem;
   background-color: #ffffff;
   border-radius: 5rem;
@@ -182,6 +183,14 @@ body {
 .btn_animated {
   animation: BtnToUp 0.4s ease-out 0.7s;
   animation-fill-mode: backwards;
+}
+.btn_brown {
+  background: #A14F03;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.btn_brown::after {
+  background: #A14F03;
 }
 
 .btn-text:link, .btn-text:visited {
@@ -435,6 +444,97 @@ body {
   z-index: -1;
 }
 
+.book {
+  height: 50rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 55%, rgba(186, 133, 84, 0.2) 55%, rgba(161, 79, 3, 0.2) 100%), url(../img/book.jpg) center/cover;
+}
+
+.form {
+  width: 55%;
+  padding-top: 5rem;
+  padding-left: 5rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+}
+.form__group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.form__group:nth-child(4) {
+  margin-bottom: 4rem;
+}
+.form__label {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  display: block;
+  transition: 0.7s all;
+}
+.form__input {
+  width: 75%;
+  border: none;
+  padding: 1.8rem 0 1.8rem 2.2rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid transparent;
+}
+.form__input:focus {
+  outline: none;
+  border-bottom: 0.2rem solid #66D763;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+.form__input:focus:invalid {
+  border-bottom: 0.2rem solid #D76363;
+}
+.form__input:-moz-placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+}
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+}
+.form__group-radio {
+  width: 45%;
+  display: inline-block;
+}
+.form__group-btn {
+  display: none;
+}
+.form__group-label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 4rem;
+}
+.form__group-span {
+  display: block;
+  position: absolute;
+  left: 0rem;
+  top: -0.8rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  border: 0.5rem solid #A14F03;
+}
+.form__group-span::after {
+  content: "";
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  background: #A14F03;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.2s all;
+}
+.form__group-btn:checked ~ .form__group-label .form__group-span::after {
+  opacity: 1;
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -521,4 +621,9 @@ body {
 .section-feedBack {
   padding: 8rem 0;
   position: relative;
+}
+
+.section-form {
+  padding: 10rem;
+  background: linear-gradient(115deg, rgb(186, 133, 84) 0%, rgb(161, 79, 3) 100%);
 }/*# sourceMappingURL=style.css.map */

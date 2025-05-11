@@ -1,9 +1,10 @@
 
 .btn 
-    &:link, &:visited
+    &, &:link, &:visited
         color: $color-gray
         text-decoration: none
         font-size: 2rem
+        border: none
         padding: 1.5rem 4rem
         background-color: $color-white
         border-radius: 5rem
@@ -36,3 +37,9 @@
     &_animated
         animation: BtnToUp .4s ease-out .7s
         animation-fill-mode: backwards
+    &_brown
+        background: $color-brown-dark
+        text-transform: uppercase
+        color: $color-white
+        &::after
+            background: $color-brown-dark

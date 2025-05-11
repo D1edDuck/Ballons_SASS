@@ -1,0 +1,66 @@
+.form 
+    width: 55%
+    padding-top: 5rem
+    padding-left: 5rem
+    font-size: $font-size-p
+    letter-spacing: .2rem
+    font-weight: 400
+    &__group
+        &:not(:last-child)
+            margin-bottom: 2rem
+        &:nth-child(4)
+            margin-bottom: 4rem
+    &__label
+        margin-top: 1rem
+        margin-left: 1.5rem
+        display: block
+        transition: .7s all
+    &__input
+        width: 75%
+        border: none
+        padding: 1.8rem 0 1.8rem 2.2rem
+        border-radius: .5rem
+        border: .2rem solid transparent
+        &:focus
+            outline: none
+            border-bottom: .2rem solid #66D763
+            box-shadow: $box-shadow
+        &:focus:invalid   
+                border-bottom: .2rem solid #D76363
+    &__input:placeholder-shown + &__label
+            opacity: 0
+            visibility: hidden
+    &__group-radio
+        width: 45%
+        display: inline-block
+    &__group-btn
+        display: none
+    &__group-label
+        cursor: pointer
+        position: relative
+        padding-left: 4rem
+    &__group-span
+        display: block
+        position: absolute
+        left: 0rem
+        top: -0.8rem
+        width: 3rem
+        height: 3rem
+        border-radius: 100%
+        border: .5rem solid $color-brown-dark
+        
+        &::after
+            content: ""
+            display: block
+            height: 1.5rem
+            width: 1.5rem
+            border-radius: 100%
+            background: $color-brown-dark
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0
+            transition: .2s all
+    &__group-btn:checked ~ &__group-label &__group-span::after
+        opacity: 1 
