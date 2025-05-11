@@ -51,6 +51,8 @@ body {
 
 .container {
   background-color: #F7F7F7;
+  position: relative;
+  z-index: 0;
 }
 
 .title-first__main {
@@ -99,6 +101,9 @@ body {
 .title-secondary:hover {
   transform: skew(15deg, 2deg) scale(1.1);
   text-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+.title-secondary_white {
+  color: #ffffff;
 }
 
 .title-third {
@@ -360,6 +365,76 @@ body {
   margin-bottom: 2rem;
 }
 
+.feedBack-card {
+  width: 85%;
+  background: rgba(255, 255, 255, 0.8);
+  margin-inline: auto;
+  padding: 6rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  transform: skew(330deg);
+}
+.feedBack-card__img {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 100%;
+  float: left;
+  margin-right: 4rem;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  overflow: hidden;
+  position: relative;
+}
+.feedBack-card > * {
+  transform: skew(-330deg);
+}
+.feedBack-card > * img {
+  height: 100%;
+  transition: 0.4s all;
+  transform: scale(1.2);
+}
+.feedBack-card__name {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+  font-size: 2.4rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: 0.4s all;
+}
+.feedBack-card:hover .feedBack-card__name {
+  opacity: 1;
+  top: 50%;
+}
+.feedBack-card:hover img {
+  filter: blur(0.3rem) brightness(60%);
+  transform: scale(1);
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bg-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.5), rgba(161, 79, 3, 0.5));
+  z-index: -1;
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -437,4 +512,13 @@ body {
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/ballons_info.png) center/cover;
   -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
           clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+}
+
+.section-tour {
+  margin-bottom: 8rem;
+}
+
+.section-feedBack {
+  padding: 8rem 0;
+  position: relative;
 }/*# sourceMappingURL=style.css.map */
