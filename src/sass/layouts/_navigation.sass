@@ -1,0 +1,99 @@
+.navigation
+    &__menu
+        height: 100vh
+        position: fixed
+        top: 0
+        right: 0
+        z-index: 150
+        text-align: center
+        width: 0
+        font-size: 2rem
+        opacity: 0
+        transition: .7s ease-in-out
+        backface-visibility: hidden
+    &__button
+        display: none            
+    &__button:checked ~ &__background
+            transform: scale(80)
+    &__button:checked ~ &__menu
+        font-size: 4rem
+        @include respond (tab-land)
+                font-size: 3rem
+        width: 100%
+        opacity: 1
+    &__button:checked + &__label &__span
+        background: transparent
+        &::after
+            transform: rotate(-135deg)
+            top: 0
+            left: 0
+        &::before 
+            top: 0
+            left: 0
+            transform: rotate(135deg)
+    &__list
+        list-style: none
+        width: 100%
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &__item
+        &:not(:last-child)
+            margin-bottom: 5rem
+    &__link
+        &:visited, &:link
+            padding: .5rem 1rem
+            text-decoration: none
+            color: $color-white
+            text-transform: uppercase
+            transition: .5s all
+            background: linear-gradient(120deg, transparent 0%, transparent 60%, $color-white 60%)
+            background-size: 300%
+        &:hover
+            background-position: 100%
+            color: $color-brown-dark
+    &__label
+        width: 8rem
+        height: 8rem
+        position: fixed
+        top: 7.5rem
+        right: 7.5rem
+        background: $color-white
+        border-radius: 100%
+        z-index: 200
+    &__label:hover &__span::before
+            top: -1rem
+    &__label:hover &__span::after
+            top: 1rem
+    &__background
+        width: 7rem
+        height: 7rem
+        border-radius: 100%
+        background: radial-gradient($color-brown-light, $color-brown-dark)
+        position: fixed
+        top: 8rem
+        right: 8rem
+        z-index: 100
+        transition: .7s ease-in-out
+    &__span
+        &,
+        &::after,
+        &::before
+            width: 3rem
+            height: .2rem
+            background: $color-black
+            display: inline-block
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            transition: .2s
+        &::after
+            content: ""
+            position: absolute
+            top: .8rem
+        &::before
+            content: ""
+            position: absolute
+            top: -.8rem

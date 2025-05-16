@@ -11,6 +11,8 @@
         letter-spacing: 1rem
         animation: leftToRight 1.7s ease .7s
         animation-fill-mode: backwards
+        @include respond (tab-land)
+            font-size: 4rem
     &__secondary
         display: block
         letter-spacing: 0.5rem
@@ -19,6 +21,8 @@
         animation: RightToLeft 1.7s ease .7s
         margin-bottom: 5rem
         animation-fill-mode: backwards
+        @include respond (tab-land)
+            font-size: 3rem
 
 body
     font-family: "Roboto", sans-serif
@@ -39,6 +43,8 @@ body
     color: transparent
     transition: all .4s
     backface-visibility: hidden
+    @include respond (tab-land)
+        font-size: 3.4rem
     &:hover
         transform: skew(15deg, 2deg) scale(1.1)
         text-shadow: 0 .4rem .4rem rgba($color-black, .25 )
