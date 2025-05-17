@@ -5,6 +5,8 @@
     text-align: center
     box-shadow: $box-shadow
     transition: .3s
+    @include respond (tab-port)
+        margin-bottom: 3rem
     &:hover
         transform: translateY(-1.5rem) scale(1.03)
         

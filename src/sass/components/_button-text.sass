@@ -1,6 +1,8 @@
 .btn-text
     &:link, &:visited
         font-size: $font-size-p
+        @include respond (phone)
+            font-size: 2.4rem
         display: inline-block
         letter-spacing: .2rem
         font-weight: 700

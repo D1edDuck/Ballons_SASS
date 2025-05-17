@@ -4,3 +4,7 @@
     border-radius: .5rem
     box-shadow: $box-shadow
     background: linear-gradient(115deg,rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 60%, rgba(186, 133, 84, 0.2) 60%, rgba(161, 79, 3, 0.2) 100%), url(../img/book.jpg) center / cover
+    @include respond (tab-port)
+        background: linear-gradient(115deg,rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 60%, rgba(186, 133, 84, 0.2) 600%, rgba(161, 79, 3, 0.2) 100%), url(../img/book.jpg) center / cover
+    @include respond (phone)
+        height: 100%

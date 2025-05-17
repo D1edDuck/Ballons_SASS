@@ -7,15 +7,29 @@
     font-weight: 400
     @include respond (tab-land)
         width: 70%
+    @include respond (tab-port)
+        width: 100%
+    @include respond (phone)
+        padding-inline: 5rem
+        padding-bottom: 3rem
     &__group
+        &-button
+            @include respond (phone)
+                text-align: center
         &:not(:last-child)
             margin-bottom: 2rem
             @include respond (tab-land)
                 margin-bottom: 0
+            @include respond (tab-port)
+                margin-bottom: 2rem
+            @include respond (phone)
+                margin-bottom: 1rem
         &:nth-child(4)
             margin-bottom: 4rem
             @include respond (tab-land)
                 margin-bottom: 2rem
+            @include respond (tab-port)
+                margin-bottom: 4rem
     &__label
         margin-top: 1rem
         margin-left: 1.5rem
@@ -27,6 +41,11 @@
         padding: 1.8rem 0 1.8rem 2.2rem
         border-radius: .5rem
         border: .2rem solid transparent
+        @include respond (tab-port)
+            box-shadow: $box-shadow
+        @include respond (phone)
+            width: 100%
+            font-size: 2rem
         &:focus
             outline: none
             border-bottom: .2rem solid #66D763

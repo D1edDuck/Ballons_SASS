@@ -3,13 +3,24 @@
     background: rgba($color-white, .8)
     margin-inline: auto
     padding: 6rem
+    @include respond (tab-port)
+        padding: 5rem
+        text-align: center
     box-shadow: $box-shadow
     transform: skew(335deg)
+    @include respond (tab-port)
+        transform: skew(345deg)
+    @include respond (phone)
+        transform: skew(355deg)
     &__img
         height: 15rem
         width: 15rem
         border-radius: 100%
         float: left
+        @include respond (tab-port)
+            float: none
+            margin-inline: auto
+            margin-bottom: 2rem
         margin-right: 4rem
         shape-outside: circle(50% at 50% 50%)
         -webkit-shape-outside: circle(50% at 50% 50%)
@@ -17,6 +28,10 @@
         position: relative
     & > *
         transform: skew(-335deg) 
+        @include respond (tab-port)
+            transform: skew(-345deg)
+        @include respond (phone)
+            transform: skew(-355deg)
         img
             height: 100%
             transition: .4s all

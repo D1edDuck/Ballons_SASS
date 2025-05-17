@@ -7,17 +7,17 @@
 
 @mixin respond($point)
     @if $point == phone
-        @media ( max-width: 600px )
+        @media only screen and ( max-width: 600px )
             @content
 
     @if $point == tab-port
-        @media ( max-width: 900px )
+        @media only screen and ( max-width: 900px )
             @content
 
     @if $point == tab-land
-        @media ( max-width: 1240px )
+        @media only screen and ( max-width: 1240px )
             @content
 
     @if $point == big-screen
-        @media ( min-width: 1800px )
+        @media only screen and ( min-width: 1800px )
             @content

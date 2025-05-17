@@ -1,10 +1,16 @@
 .section-about
     padding-top: 8rem
+    @include respond (tab-port)
+        padding-top: 4rem
+        margin-bottom: 40rem
 
 .section-info 
     padding: 21rem 0
     background: linear-gradient(90deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-black, 0.7) 99.94%),url(../img/ballons_info.png) center / cover
     clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%)
+    @include respond (tab-port)
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%)
+        padding: 21rem 2rem
 
 .section-tour
     margin-bottom: 8rem
@@ -16,3 +22,7 @@
 .section-form
     padding: 10rem
     background: linear-gradient(115deg,rgba(186, 133, 84, 1) 0%, rgba(161, 79, 3, 1) 100%)
+    @include respond (tab-port)
+        padding: 4rem
+    @include respond (phone)
+        height: 100%
